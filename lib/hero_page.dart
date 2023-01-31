@@ -1,3 +1,6 @@
+import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+
 class HeroImages {
   static const List<String> titles = [
     'test1',
@@ -28,4 +31,22 @@ class HeroImages {
     'https://1.bp.blogspot.com/-lBwjcbFpUC8/X7zMGDag4KI/AAAAAAABcYA/UfxtLUmMtG4yghNnMtg6NHhI912d2jo_QCNcBGAsYHQ/s763/buki_sasumata.png',
     'https://blogger.googleusercontent.com/img/a/AVvXsEib5phyUSRqDvePg-ZD3FSPyLRhi8L6UaXFOXqwljCjOlI0Iau2VbDu9I5RvB2-wfzrTF9GMXkdAosObQlA-TMwqLD3KjLLNwAQcjZE6TaKf-qqbJI9-uRtw9Ayf_L6rYhEAAs_r7kmXzWZqKPl-mEl1jg_qTzAdsARErw2eqOUmtvwLrR4AgpF-4tsVw=s985',
   ];
+}
+
+class ImageItem extends StatelessWidget {
+  ImageItem({required this.url});
+
+  final String url;
+
+  @override
+  Widget build(BuildContext context) {
+    return CachedNetworkImage(
+      imageUrl: url,
+      placeholder: (context, url) => Container(
+        color: Colors.grey[200],
+        child: CircularProgressIndicator(),
+      ),
+      fit: BoxFit.cover,
+    );
+  }
 }
