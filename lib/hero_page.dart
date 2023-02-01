@@ -65,6 +65,7 @@ class HeroFromPage extends StatelessWidget {
         children: [
           for (var index = 0; index < HeroImages.titles.length; index++)
             Hero(
+              //ここが動作について
               tag: HeroImages.titles[index],
               child: GestureDetector(
                 onTap: () {
