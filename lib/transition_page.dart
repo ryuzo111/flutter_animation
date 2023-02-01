@@ -26,13 +26,13 @@ class TransitionPage extends StatelessWidget {
                   onPrimary: Colors.black,
                 ),
                 onPressed: () {
-                  // Navigator.of(context).push(
-                  //   PageRouteBuilder(
-                  //     pageBuilder: (context, animation, secondaryAnimation) {
-                  //       return _PageA();
-                  //     },
-                  //   ),
-                  // );
+                  Navigator.of(context).push(
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) {
+                        return _PageA();
+                      },
+                    ),
+                  );
                 },
                 child: Text('遷移'),
               ),
