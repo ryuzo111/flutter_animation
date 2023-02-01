@@ -66,7 +66,8 @@ class HeroFromPage extends StatelessWidget {
           for (var index = 0; index < HeroImages.titles.length; index++)
             Hero(
               //ここが動作について
-              tag: HeroImages.titles[index], //遷移先と遷移元をtagがつなぐようにする
+              tag: HeroImages.titles[index], //遷移先と遷移元をtagがつなぐようにする 遷移先を把握するための鍵
+              transitionOnUserGestures: true,
               child: GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(
@@ -104,6 +105,7 @@ class HeroToPage extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Hero(
+            transitionOnUserGestures: true,
             tag: HeroImages.titles[index],
             child: Center(
               child: ImageItem(url: HeroImages.urls[index]),
