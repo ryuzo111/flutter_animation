@@ -43,6 +43,7 @@ class ImageItem extends StatelessWidget {
     return CachedNetworkImage(
       imageUrl: url,
       placeholder: (context, url) => Container(
+        //ここが画面読み込み中の表示
         color: Colors.grey[200],
         child: CircularProgressIndicator(),
       ),
@@ -65,13 +66,13 @@ class HeroFromPage extends StatelessWidget {
           for (var index = 0; index < HeroImages.titles.length; index++)
             GestureDetector(
               onTap: () {
-                // Navigator.of(context).push(
-                //   MaterialPageRoute(
-                //     builder: (context) => HeroToPage(
-                //       index: index,
-                //     ),
-                //   ),
-                // );
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => HeroToPage(
+                      index: index,
+                    ),
+                  ),
+                );
               },
               child: ImageItem(
                 url: HeroImages.urls[index],
@@ -79,6 +80,26 @@ class HeroFromPage extends StatelessWidget {
             ),
         ],
       ),
+    );
+  }
+}
+
+class HeroToPage extends StatelessWidget {
+  HeroToPage({required this.index});
+
+  final int index;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      child: Scaffold(
+          backgroundColor: Colors.black87,
+          appBar: AppBar(
+            title: Text(HeroImages.titles[index]),
+          ),
+          body: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+          )),
     );
   }
 }
