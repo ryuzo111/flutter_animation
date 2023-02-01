@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'hero_page.dart';
+import 'transition_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: HeroFromPage(),
+      // home: HeroFromPage(),
+      home: TransitionPage(),
     );
   }
 }
