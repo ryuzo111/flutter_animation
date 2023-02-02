@@ -35,7 +35,8 @@ class TransitionPage extends StatelessWidget {
                           (context, animation, secondaryAnimation, child) {
                         return RotationTransition(
                           turns: Tween(
-                            begin: 0.0, end: 2.0,
+                            //回る
+                            begin: 0.0, end: 9.0,
                             // return SlideTransition( 上から斜めにでてくる
                             //   position: Tween(
                             //     begin: const Offset(-1, -1),
