@@ -33,10 +33,13 @@ class TransitionPage extends StatelessWidget {
                       },
                       transitionsBuilder:
                           (context, animation, secondaryAnimation, child) {
-                        return SlideTransition(
-                          position: Tween(
-                            begin: const Offset(-1, -1),
-                            end: const Offset(0, 0),
+                        return RotationTransition(
+                          turns: Tween(
+                            begin: 0.0, end: 2.0,
+                            // return SlideTransition( 上から斜めにでてくる
+                            //   position: Tween(
+                            //     begin: const Offset(-1, -1),
+                            //     end: const Offset(0, 0),
                           ).animate(
                             CurvedAnimation(
                               parent: animation,
@@ -49,7 +52,8 @@ class TransitionPage extends StatelessWidget {
                     ),
                   );
                 },
-                child: Text('遷移'),
+                // child: Text('遷移'),
+                child: Text('回転'),
               ),
             ),
           ],
