@@ -15,6 +15,7 @@ class _AnimationControllerPageState extends State<AnimationControllerPage>
   //vsyncパラメータを導入するにはこのmixinが必要となる
   late AnimationController _animationController; //宣言とインスタンス化は同時にできない
   double _value = 0;
+  int _seconds = 0;
 
   @override
   void initState() {
@@ -37,6 +38,12 @@ class _AnimationControllerPageState extends State<AnimationControllerPage>
   void dispose() {
     _animationController.dispose();
     super.dispose();
+  }
+
+  void _updateSeconds(int newSeconds) {
+    setState(() {});
+    _seconds = newSeconds;
+    _animationController.duration = Duration(seconds: _seconds);
   }
 
   @override
