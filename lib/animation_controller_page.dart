@@ -2,7 +2,29 @@ import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'dart:math';
 
-class AnimationControllerPage extends StatelessWidget {
+class AnimationControllerPage extends StatefulWidget {
+  const AnimationControllerPage({super.key});
+
+  @override
+  State<AnimationControllerPage> createState() =>
+      _AnimationControllerPageState();
+}
+
+class _AnimationControllerPageState extends State<AnimationControllerPage>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _animationController;
+
+  @override
+  void initState() {
+    super.initState();
+    _animationController = AnimationController(
+      vsync: this,
+      duration: Duration(
+        seconds: 15,
+      ),
+    ); //インスタンス化
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
