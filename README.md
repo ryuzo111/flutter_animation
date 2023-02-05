@@ -12,3 +12,6 @@ A new Flutter project.
 ### page遷移
 <img src="https://user-images.githubusercontent.com/73731762/216369909-fe8fed6e-2749-472b-bc79-b7009eb4a271.png" width="300" />
 <img src="https://user-images.githubusercontent.com/73731762/216369945-1b5d519a-79e4-4417-86be-231220426df4.png" width="300" />
+
+### 進捗バーがあるアニメーション
+<img src="https://user-images.githubusercontent.com/73731762/216804898-21e733ff-c5c7-450f-ba2f-be33453af3eb.png" width="300" />
