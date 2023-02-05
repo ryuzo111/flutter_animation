@@ -14,6 +14,7 @@ class _AnimationControllerPageState extends State<AnimationControllerPage>
     with SingleTickerProviderStateMixin {
   //vsyncパラメータを導入するにはこのmixinが必要となる
   late AnimationController _animationController; //宣言とインスタンス化は同時にできない
+  double _value = 0;
 
   @override
   void initState() {
@@ -24,6 +25,12 @@ class _AnimationControllerPageState extends State<AnimationControllerPage>
         seconds: 15,
       ),
     ); //インスタンス化
+
+    _animationController.addListener(() {
+      setState(() {
+        _value = _animationController.value;
+      });
+    });
   }
 
   @override
