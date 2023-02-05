@@ -187,22 +187,28 @@ class _AnimationControllerPageState extends State<AnimationControllerPage>
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Radio(
-                  value: null,
-                  groupValue: null,
-                  onChanged: null,
+                Radio<int>(
+                  value: 15,
+                  groupValue: _seconds,
+                  onChanged: (int? newValue) {
+                    _updateSeconds(newValue!);
+                  },
                 ),
                 const Text('15秒'),
                 Radio(
-                  value: null,
-                  groupValue: null,
-                  onChanged: null,
+                  value: 30,
+                  groupValue: _seconds,
+                  onChanged: (int? newValue) {
+                    _updateSeconds(newValue!);
+                  },
                 ),
                 const Text('30秒'),
                 Radio(
-                  value: null,
-                  groupValue: null,
-                  onChanged: null,
+                  value: 60,
+                  groupValue: _seconds,
+                  onChanged: (int? newValue) {
+                    _updateSeconds(newValue!);
+                  },
                 ),
                 const Text('60秒'),
               ],
