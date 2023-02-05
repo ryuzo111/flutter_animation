@@ -68,7 +68,7 @@ class _AnimationControllerPageState extends State<AnimationControllerPage>
                   primary: Colors.grey[300],
                   onPrimary: Colors.black,
                 ),
-                onPressed: () {},
+                onPressed: _animationController.forward,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
