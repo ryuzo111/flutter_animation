@@ -104,13 +104,14 @@ class HeroToPage extends StatelessWidget {
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Hero(
-            transitionOnUserGestures: true,
-            tag: HeroImages.titles[index],
-            child: Center(
-              child: ImageItem(url: HeroImages.urls[index]),
-            ),
-          ),
+          // child: Hero(
+          //   transitionOnUserGestures: true,
+          //   tag: HeroImages.titles[index],
+          //   child: Center(
+          //     child: ImageItem(url: HeroImages.urls[index]),
+          //   ),
+          // ),
+          child: OpenContainer(closeBuilder:)
         ),
       ),
     );
