@@ -59,11 +59,21 @@ class _AnimationControllerPageState extends State<AnimationControllerPage>
                 fontSize: 22,
               ),
             ),
-            Text(
-              _value.toStringAsFixed(2),
-              style: TextStyle(
-                fontSize: 64,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircularProgressIndicator(
+                  value: _animationController.value,
+                  backgroundColor: Colors.grey[300],
+                ),
+                SizedBox(width: 20),
+                Text(
+                  _value.toStringAsFixed(2),
+                  style: TextStyle(
+                    fontSize: 64,
+                  ),
+                ),
+              ],
             ),
             SizedBox(
               height: 12,
