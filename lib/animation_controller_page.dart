@@ -108,7 +108,7 @@ class _AnimationControllerPageState extends State<AnimationControllerPage>
                   primary: Colors.grey[300],
                   onPrimary: Colors.black,
                 ),
-                onPressed: () {},
+                onPressed: _animationController.stop,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
