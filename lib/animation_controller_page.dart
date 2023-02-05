@@ -12,13 +12,14 @@ class AnimationControllerPage extends StatefulWidget {
 
 class _AnimationControllerPageState extends State<AnimationControllerPage>
     with SingleTickerProviderStateMixin {
-  late AnimationController _animationController;
+  //vsyncパラメータを導入するにはこのmixinが必要となる
+  late AnimationController _animationController; //宣言とインスタンス化は同時にできない
 
   @override
   void initState() {
     super.initState();
     _animationController = AnimationController(
-      vsync: this,
+      vsync: this, //animationControllerを利用するためにはvsyncパラメータがひつよう
       duration: Duration(
         seconds: 15,
       ),
