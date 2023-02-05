@@ -53,7 +53,7 @@ class _AnimationControllerPageState extends State<AnimationControllerPage>
               ),
             ),
             Text(
-              '1.00',
+              _value.toStringAsFixed(2),
               style: TextStyle(
                 fontSize: 64,
               ),
