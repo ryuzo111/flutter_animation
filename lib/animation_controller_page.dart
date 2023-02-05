@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'dart:math';
+import 'dart:ui';
 
 class AnimationControllerPage extends StatefulWidget {
   const AnimationControllerPage({super.key});
@@ -71,6 +72,7 @@ class _AnimationControllerPageState extends State<AnimationControllerPage>
                   _value.toStringAsFixed(2),
                   style: TextStyle(
                     fontSize: 64,
+                    fontFeatures: [FontFeature.tabularFigures()],
                   ),
                 ),
               ],
