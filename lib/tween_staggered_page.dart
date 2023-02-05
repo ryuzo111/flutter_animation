@@ -15,6 +15,7 @@ class _TweenStaggeredPageState extends State<TweenStaggeredPage>
   //vsyncパラメータを導入するにはこのmixinが必要となる
   late AnimationController _animationController; //宣言とインスタンス化は同時にできない
   final int _seconds = 0;
+  late Animation<int> _integer;
 
   // _colorFoo = ColorTween(begin: Colors.blue, end: Colors.yellow,).animate(_animationController);
 
@@ -29,6 +30,10 @@ class _TweenStaggeredPageState extends State<TweenStaggeredPage>
     )..addListener(() {
         setState(() {});
       }); //インスタンス化
+
+    _integer = _animationController.drive(
+      IntTween(begin: 0, end: _seconds),
+    );
   }
 
   @override
@@ -44,6 +49,10 @@ class _TweenStaggeredPageState extends State<TweenStaggeredPage>
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text(
+              _integer.value.toString(),
+              style: TextStyle(fontSize: 64),
+            ),
             Container(
               width: 120,
               height: 200,
