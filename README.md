@@ -2,7 +2,6 @@
 
 A new Flutter project.
 
-## Getting Started
 
 ### Heroを使ったアニメーション
 <img src="https://user-images.githubusercontent.com/73731762/216082604-e9b1fec0-ce9e-48ea-90d4-c3f02ae59d99.png" width="300" />
