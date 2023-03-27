@@ -11,4 +11,3 @@
 
 ### 進捗バーがあるアニメーション
 <img src="https://user-images.githubusercontent.com/73731762/216804898-21e733ff-c5c7-450f-ba2f-be33453af3eb.png" width="300" />
-
